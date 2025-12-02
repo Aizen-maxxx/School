@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class StudentInfoSystem {
 
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
         HashMap<String, Student> studentRecords = new HashMap<>();
 
@@ -78,30 +78,38 @@ public class StudentInfoSystem {
                     String updateName = sc.nextLine();
 
                     if (studentRecords.containsKey(updateName)) {
-                        Student s = studentRecords.get(updateName);
+                        System.out.println("Enter new details:");
 
-                        System.out.print("Enter new Student ID: ");
-                        s.setStudentId(sc.nextLine());
+                        System.out.print("Enter Name: ");
+                        String updName = sc.nextLine();
 
-                        System.out.print("Enter new Gender: ");
-                        s.setGender(sc.nextLine());
+                        System.out.print("Enter Student ID: ");
+                        String updId = sc.nextLine();
 
-                        System.out.print("Enter new Age: ");
-                        s.setAge(sc.nextInt());
+                        System.out.print("Enter Gender: ");
+                        String updGender = sc.nextLine();
+
+                        System.out.print("Enter Age: ");
+                        int updAge = sc.nextInt();
                         sc.nextLine();
 
-                        System.out.print("Enter new Contact Number: ");
-                        s.setContactNumber(sc.nextLine());
-                        
-                        System.out.print("Enter new Email: ");
-                        s.setEmail(sc.nextLine());
+                        System.out.print("Enter Contact Number: ");
+                        String updContact = sc.nextLine();
 
-                        System.out.print("Enter new Year Level: ");
-                        s.setYearLevel(sc.nextInt());
+                        System.out.print("Enter Email: ");
+                        String updEmail = sc.nextLine();
+
+                        System.out.print("Enter Year Level: ");
+                        int updYear = sc.nextInt();
                         sc.nextLine();
 
-                        System.out.print("Enter new Course: ");
-                        s.setCourse(sc.nextLine());
+                        System.out.print("Enter Course: ");
+                        String updCourse = sc.nextLine();
+
+                        Student updatedStudent = new Student(
+                                updName, updId, updGender, updAge,
+                                updContact, updEmail, updYear, updCourse
+                        );
 
                         System.out.println("Student updated.");
                     } else {
@@ -122,8 +130,10 @@ public class StudentInfoSystem {
                     break;
 
                 case 5:
-                    System.out.println("\n                                       ALL STUDENTS ");
+                    System.out.println("\n                                             ALL STUDENTS ");
 
+                    
+                    
                     if (studentRecords.isEmpty()) {
                         System.out.println("No records found.");
                     } else {
@@ -150,3 +160,5 @@ public class StudentInfoSystem {
         }
     }
 }
+
+
