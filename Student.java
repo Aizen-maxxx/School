@@ -23,35 +23,6 @@ public class Student implements Display {
         this.yearLevel = yearLevel;
         this.course = course;
     }
-    
-    
-     public void setStudentId(String v) {
-        studentId = v;
-    }
-
-    public void setGender(String v) {
-        gender = v;
-    }
-
-    public void setAge(int v) {
-        age = v;
-    }
-
-    public void setContactNumber(String v) {
-        contactNumber = v;
-    }
-
-    public void setEmail(String v) {
-        email = v;
-    }
-
-    public void setYearLevel(int v) {
-        yearLevel = v;
-    }
-
-    public void setCourse(String v) {
-        course = v;
-    }
 
     public String getName() {
         return name;
@@ -103,3 +74,4 @@ public class Student implements Display {
     }
 
 }
+
